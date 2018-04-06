@@ -12,5 +12,20 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('inicio');
 });
+Route::get('/layouts/fabrica', function () {
+    return view('layouts.fabrica');
+});
+Route::get('/layouts/distribuidora', function () {
+    return view('layouts.distribuidora');
+});
+Route::get('/.admin', function () {
+    return view('layouts.admin');
+});
+
+Route::resource('inicio/configurar_inicio','InicioController');
+Route::resource('fabrica/configurar_fabrica','FabricaController');
+Route::resource('fabrica/slider','SliderController');
+Route::resource('distribuidora/configurar_distribuidora','DistribuidoraController');
+
