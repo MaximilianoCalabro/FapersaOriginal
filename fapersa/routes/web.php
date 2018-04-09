@@ -29,3 +29,7 @@ Route::resource('fabrica/configurar_fabrica','FabricaController');
 Route::resource('fabrica/slider','SliderController');
 Route::resource('distribuidora/configurar_distribuidora','DistribuidoraController');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
