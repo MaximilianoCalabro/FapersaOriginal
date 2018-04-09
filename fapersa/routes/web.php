@@ -21,7 +21,7 @@ Route::get('/layouts/distribuidora', function () {
     return view('layouts.distribuidora');
 });
 Route::get('/.admin', function () {
-    return view('layouts.admin');
+    return view('auth/login');
 });
 
 Route::resource('inicio/configurar_inicio','InicioController');
