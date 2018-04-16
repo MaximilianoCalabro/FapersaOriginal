@@ -66,10 +66,16 @@
           </div> -->
         </div>
       </nav>
-      
-      <section class="home-section bg-dark-30" id="home" data-background="assets/images/finance/finance_header_bg.png">
-        <div class="video-player" data-property="{videoURL:'https://www.youtube.com/watch?v=uzlUiiH9IFo', containment:'.home-section', startAt:30, mute:false, autoPlay:true, loop:true, opacity:1, showControls:false, showYTLogo:false, vol:25}"></div>
-        <div class="video-controls-box">
+      @foreach ($inicio as $cat)
+      <section class="home-section bg-dark-30" id="home">
+          <div class="video-player">
+            <video controls autoplay>
+              <source src="{{asset('img/inicio/{{ $cat->video }}')}}" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <!-- <div class="video-player" data-property="{videoURL:'https://www.youtube.com/watch?v=uzlUiiH9IFo', containment:'.home-section', startAt:30, mute:false, autoPlay:true, loop:true, opacity:1, showControls:false, showYTLogo:false, vol:25}"></div> -->
+          <div class="video-controls-box">
           <div class="container">
             <div class="video-controls"><a class="fa fa-volume-up" id="video-volume" href="#">&nbsp;</a><a class="fa fa-pause" id="video-play" href="#">&nbsp;</a></div>
           </div>
@@ -86,26 +92,26 @@
       </section>
       <div class="main">
         <section class="module pt-0 pb-0">
-          @foreach ($inicio as $cat)
+          
           <div class="row position-relative m-0">
-            <div class="col-xs-12 col-md-6 side-image" data-background="{{ $cat->$imagen }}"></div>
+            <div class="col-xs-12 col-md-6 side-image" data-background="{{url('/')}}/img/inicio/{{ $cat->imagen }}"></div>
             <div class="col-xs-12 col-md-6 col-md-offset-6">
               <div class="row finance-image-content">
                 <div class="col-md-10 col-md-offset-1">
-                  <h2 class="module-title font-alt align-mid">{{$cat->$titulo}}</h2>
+                  <h2 class="module-title font-alt align-mid">{{ $cat->titulo}}</h2>
                   <div class="row multi-columns-row">
                     <div class="col-md-6 col-sm-6 col-xs-12">
-                      <p>{{$cat->$texto}}</p>
+                      <p>{{$cat->texto}}</p>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-12">
-                      <p>{{$cat->$texto2}}</p>
+                      <p>{{$cat->texto2}}</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          @endforeach
+          
         </section>
         <section class="module bg-dark-60 request-cta" id="contact">
           <div id="googlemaps" class="about-col">
@@ -116,9 +122,9 @@
               <div class="row">
                 <div class="col-sm-6 cont">
                   <h2 class="font-alt" style="text-align: center">Contactenos</h2>
-                  <p class="st-address" style="text-align: center"><i class="fa fa-map-marker"></i> <strong>{{$cat->$direccion}}</strong></p>
-                  <p class="st-phone" style="text-align: center"><i class="fa fa-mobile"></i> <strong>{{$cat->$telefono}}</strong></p>
-                  <p class="st-email" style="text-align: center"><i class="fa fa-envelope-o"></i> <strong>{{$cat->$correo}}</strong></p>
+                  <p class="st-address" style="text-align: center"><i class="fa fa-map-marker"></i> <strong>{{$cat->direccion}}</strong></p>
+                  <p class="st-phone" style="text-align: center"><i class="fa fa-mobile"></i> <strong>{{$cat->telefono}}</strong></p>
+                  <p class="st-email" style="text-align: center"><i class="fa fa-envelope-o"></i> <strong>{{$cat->correo}}</strong></p>
                 </div>
                 <div class="col-sm-6">
                   <div class="row">
@@ -169,7 +175,7 @@
             </div>
           </div>
         </section>
-      
+      @endforeach
       <div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div>
     </main>
     <!--  
