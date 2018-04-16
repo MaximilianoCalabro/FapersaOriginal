@@ -32,15 +32,16 @@ class DistribuidoraController extends Controller
 	{
 		$distribuidora=new fa_distribuidora;
 
-		$distribuidora->catalogo=$request->get('catalogo');
-		$distribuidora->direccion=$request->get('direccion');
-		$distribuidora->telefono=$request->get('telefono');
-		$distribuidora->correo=$request->get('correo');
 		if (Input::hasFile ('video')){
 			$file=Input::file('video');
 			$file->move(public_path().'/img/distribuidora/',$file->getClientOriginalName());
 			$distribuidora->video=$file->getClientOriginalName();
 		}
+		$distribuidora->catalogo=$request->get('catalogo');
+		$distribuidora->direccion=$request->get('direccion');
+		$distribuidora->telefono=$request->get('telefono');
+		$distribuidora->correo=$request->get('correo');
+
 		$distribuidora->save();
 		return Redirect::to('distribuidora/configurar_distribuidora');
 	}

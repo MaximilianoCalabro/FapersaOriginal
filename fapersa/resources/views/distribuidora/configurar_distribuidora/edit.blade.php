@@ -13,11 +13,11 @@
             </div>
             @endif
 
-            {!!Form::model($distribuidora,['method'=>'PATCH','route'=>['configurar_distribuidora.update',$distribuidora->iddistribuidora]])!!}
+            {!!Form::model($distribuidora,['method'=>'PATCH','route'=>['configurar_distribuidora.update',$distribuidora->iddistribuidora],'files'=>'true'])!!}
             {{Form::token()}}
             <div class="form-group">
                   <label for="video">Video</label>
-                  <input type="file" accept=".mp4" class="form-control" value="{{$distribuidora->video}}" placeholder="Video">
+                  <input type="file" accept="video/*" name="video" class="form-control" value="{{$distribuidora->video}}" placeholder="Video">
             </div>
             <div class="form-group">
                   <label for="catalogo">Catálogo</label>
