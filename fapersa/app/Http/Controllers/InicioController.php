@@ -3,7 +3,7 @@
 namespace fapersa\Http\Controllers;
 
 use Illuminate\Http\Request;
-use fapersa\fa_inicio;
+use fapersa\Fa_inicio;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Input;
 use fapersa\Http\Requests\InicioFormRequest;
@@ -30,7 +30,7 @@ class InicioController extends Controller
     }
 	public function store(InicioFormRequest $request)
 	{
-		$inicio=new fa_inicio;
+		$inicio=new Fa_inicio;
 
 		$inicio->titulo=$request->get('titulo');
 		$inicio->texto=$request->get('texto');
@@ -42,26 +42,26 @@ class InicioController extends Controller
 			$file->move(public_path().'/img/inicio/',$file->getClientOriginalName());
 			$inicio->video=$file->getClientOriginalName();
 		}
-		if (Input::hasFile ('imagen')){
-			$file=Input::file('imagen');
-			$file->move(public_path().'/img/inicio/',$file->getClientOriginalName());
-			$inicio->imagen=$file->getClientOriginalName();
+		if (Input::hasFile ('imagen_inicio')){
+			$file2=Input::file('imagen_inicio');
+			$file2->move(public_path().'/img/inicio/',$file2->getClientOriginalName());
+			$inicio->imagen=$file2->getClientOriginalName();
 		}
 		$inicio->save();
 		return Redirect::to('inicio/configurar_inicio');
 	}
 	public function show($id)
 	{
-		return view("inicio.configurar_inicio.show",["inicio"=>fa_inicio::findOrFail($id)]);
+		return view("inicio.configurar_inicio.show",["inicio"=>Fa_inicio::findOrFail($id)]);
 	}
 	public function edit($id)
 	{
-		return view("inicio.configurar_inicio.edit",["inicio"=>fa_inicio::findOrFail($id)]);	
+		return view("inicio.configurar_inicio.edit",["inicio"=>Fa_inicio::findOrFail($id)]);	
 	}
 	public function update(InicioFormRequest $request, $id)
 	{
-		$inicio=fa_inicio::findOrFail($id);
-
+		$inicio=Fa_inicio::findOrFail($id);
+		error_log('MAMAMAMAMAMAAAMA');
 		$inicio->titulo=$request->get('titulo');
 		$inicio->texto=$request->get('texto');
 		$inicio->direccion=$request->get('direccion');
@@ -72,17 +72,17 @@ class InicioController extends Controller
 			$file->move(public_path().'/img/inicio/',$file->getClientOriginalName());
 			$inicio->video=$file->getClientOriginalName();
 		}
-		if (Input::hasFile ('imagen')){
-			$file=Input::file('imagen');
-			$file->move(public_path().'/img/inicio/',$file->getClientOriginalName());
-			$inicio->imagen=$file->getClientOriginalName();
+		if (Input::hasFile ('imagen_inicio')){
+			$file2=Input::file('imagen_inicio');
+			$file2->move(public_path().'/img/inicio/',$file2->getClientOriginalName());
+			$inicio->imagen=$file2->getClientOriginalName();
 		}
 		$inicio->update();
 		return Redirect::to('inicio/configurar_inicio');
 	}
 	public function destroy($id)
 	{
-		$inicio=fa_inicio::findOrFail($id);
+		$inicio=Fa_inicio::findOrFail($id);
 		$inicio->delete();
 		return Redirect::to('inicio/configurar_inicio');
 	}

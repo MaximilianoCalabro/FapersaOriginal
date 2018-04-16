@@ -4,7 +4,7 @@ namespace fapersa;
 
 use Illuminate\Database\Eloquent\Model;
 
-class fa_inicio extends Model
+class Fa_inicio extends Model
 {
 	protected $table='fa_inicio';
 

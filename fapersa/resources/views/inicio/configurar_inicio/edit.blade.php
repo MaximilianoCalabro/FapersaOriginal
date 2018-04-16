@@ -13,17 +13,18 @@
             </div>
             @endif
 
-            {!!Form::model($inicio,['method'=>'PATCH','route'=>['configurar_inicio.update',$inicio->idinicio]])!!}
+            {!!Form::model($inicio,['method'=>'PATCH','route'=>['configurar_inicio.update',$inicio->idinicio], 'files'=>'true'])!!}
             {{Form::token()}}
             <div class="form-group">
                   <label for="video">Video</label>
                   <input type="file" accept="video/*" name="video" class="form-control" value="{{$inicio->video}}" placeholder="Video">
             </div>
+
             <div class="form-group">
-                  <label for="imagen">Imagen</label>
-                  <input type="file" name="imagen" class="form-control" value="{{$inicio->imagen}}" placeholder="Imágen">
+                  <label for="imagen_slider">Imagen</label>
+                  <input type="file" name="imagen_inicio" class="form-control" value="{{$inicio->imagen}}">
                   @if (($inicio->imagen)!='')
-                        <img src="{{asset('img/inicio/'.$inicio->imagen)}}" height="100px" width="100px">
+                        <img src="{{asset('img/inicio/'.$inicio->imagen)}}" height="150px" width="150px">
                   @endif
             </div>
             <div class="form-group">

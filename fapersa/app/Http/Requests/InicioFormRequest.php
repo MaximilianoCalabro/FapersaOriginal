@@ -24,8 +24,8 @@ class InicioFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'video'=>'required|max:250',
-            'imagen'=>'required|max:50',
+            'video'=>'required',
+            'imagen'=>'mimes:jpeg,bmp,png',
             'titulo'=>'required|max:50',
             'texto'=>'required|max:1000',
             'direccion'=>'required|max:250',
