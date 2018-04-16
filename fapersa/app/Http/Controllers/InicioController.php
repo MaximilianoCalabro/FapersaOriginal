@@ -34,6 +34,7 @@ class InicioController extends Controller
 
 		$inicio->titulo=$request->get('titulo');
 		$inicio->texto=$request->get('texto');
+		$inicio->texto2=$request->get('texto2');
 		$inicio->direccion=$request->get('direccion');
 		$inicio->telefono=$request->get('telefono');
 		$inicio->correo=$request->get('correo');
@@ -61,9 +62,10 @@ class InicioController extends Controller
 	public function update(InicioFormRequest $request, $id)
 	{
 		$inicio=Fa_inicio::findOrFail($id);
-		error_log('MAMAMAMAMAMAAAMA');
+
 		$inicio->titulo=$request->get('titulo');
 		$inicio->texto=$request->get('texto');
+		$inicio->texto2=$request->get('texto2');
 		$inicio->direccion=$request->get('direccion');
 		$inicio->telefono=$request->get('telefono');
 		$inicio->correo=$request->get('correo');

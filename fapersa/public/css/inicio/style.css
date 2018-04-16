@@ -200,6 +200,10 @@ a,
   z-index: 10;
 }
 
+img .logo{
+  max-width: 75%;
+  border:25px;
+}
 
 #contact .about-col .img img {
   border-radius: 4px 4px 0 0;

@@ -28,6 +28,7 @@ class InicioFormRequest extends FormRequest
             'imagen'=>'mimes:jpeg,bmp,png',
             'titulo'=>'required|max:50',
             'texto'=>'required|max:1000',
+            'texto2'=>'max:1000',
             'direccion'=>'required|max:250',
             'telefono'=>'required|max:50',
             'correo'=>'required|max:150'

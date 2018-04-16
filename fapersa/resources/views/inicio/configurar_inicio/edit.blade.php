@@ -13,7 +13,7 @@
             </div>
             @endif
 
-            {!!Form::model($inicio,['method'=>'PATCH','route'=>['configurar_inicio.update',$inicio->idinicio], 'files'=>'true'])!!}
+            {!!Form::model($inicio,['method'=>'PATCH','route'=>['configurar_inicio.update',$inicio->idinicio],'files'=>'true'])!!}
             {{Form::token()}}
             <div class="form-group">
                   <label for="video">Video</label>
@@ -34,6 +34,10 @@
             <div class="form-group">
                   <label for="texto">Texto</label>
                   <textarea name="texto" class="form-control" placeholder="Texto">{{$inicio->texto}}</textarea>
+            </div>
+            <div class="form-group">
+                  <label for="texto2">Texto 2</label>
+                  <textarea name="texto2" class="form-control" placeholder="Texto 2">{{$inicio->texto2}}</textarea>
             </div>
             <div class="form-group">
                   <label for="direccion">Dirección</label>

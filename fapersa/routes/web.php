@@ -31,5 +31,5 @@ Route::resource('distribuidora/configurar_distribuidora','DistribuidoraControlle
 
 
 Auth::routes();
-
+Route::get('/', 'PaginaController@show');
 Route::get('/home', 'HomeController@index')->name('home');

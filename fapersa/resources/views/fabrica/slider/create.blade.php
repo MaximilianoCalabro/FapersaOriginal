@@ -13,7 +13,7 @@
                   </div>
                   @endif
 
-            {!!Form::open(array('url'=>'/fabrica/slider','method'=>'POST','autocomplete'=>'off'))!!}
+            {!!Form::open(array('url'=>'/fabrica/slider','method'=>'POST','autocomplete'=>'off','files'=>'true))!!}
             {{Form::token()}}
             <div class="form-group">
                   <label for="imagen_slider">Img. Slider</label>

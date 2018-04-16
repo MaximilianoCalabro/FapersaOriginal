@@ -13,7 +13,7 @@
             </div>
             @endif
 
-            {!!Form::model($fabrica,['method'=>'PATCH','route'=>['configurar_fabrica.update',$fabrica->idfabrica]])!!}
+            {!!Form::model($fabrica,['method'=>'PATCH','route'=>['configurar_fabrica.update',$fabrica->idfabrica],'files'=>'true'])!!}
             {{Form::token()}}
             <div class="form-group">
                   <label for="imagen_fondo">Img. Fondo</label>

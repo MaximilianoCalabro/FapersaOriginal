@@ -17,6 +17,7 @@ class Fa_inicio extends Model
 		'imagen',
 		'titulo',
 		'texto',
+		'texto2',
 		'direccion',
 		'telefono',
 		'correo'

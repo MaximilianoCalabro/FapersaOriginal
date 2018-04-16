@@ -15,6 +15,7 @@
 					<th>Imagen</th>
 					<th>Título</th>
 					<th>Texto</th>
+					<th>Texto 2</th>
 					<th>Dirección</th>
 					<th>Teléfono</th>
 					<th>Correo</th>
@@ -26,6 +27,7 @@
 					<td><img src="{{asset('img/inicio/'.$cat->imagen)}}" height="150px" width="150px"></td>
 					<td>{{ $cat->titulo}}</td>
 					<td><textarea rows="7" cols="30">{{ $cat->texto}}</textarea></td>
+					<td><textarea rows="7" cols="30">{{ $cat->texto2}}</textarea></td>
 					<td>{{ $cat->direccion}}</td>
 					<td>{{ $cat->telefono}}</td>
 					<td>{{ $cat->correo}}</td>

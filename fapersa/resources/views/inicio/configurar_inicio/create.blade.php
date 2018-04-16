@@ -13,7 +13,7 @@
 			</div>
 			@endif
 
-			{!!Form::open(array('url'=>'/inicio/configurar_inicio','method'=>'POST','autocomplete'=>'off'))!!}
+			{!!Form::open(array('url'=>'/inicio/configurar_inicio','method'=>'POST','autocomplete'=>'off','files'=>'true))!!}
             {{Form::token()}}
             <div class="form-group">
             	<label for="video">Video</label>
@@ -21,15 +21,19 @@
             </div>
             <div class="form-group">
             	<label for="imagen">Imagen</label>
-            	<input type="file" name="imagen" class="form-control" placeholder="Imágen">
+            	<input type="file" name="imagen" class="form-control" placeholder="Imagen">
             </div>
                         <div class="form-group">
                   <label for="titulo">Título</label>
                   <input type="text" name="titulo" class="form-control" placeholder="Título">
             </div>
-                        <div class="form-group">
+            <div class="form-group">
                   <label for="texto">Texto</label>
                   <input type="text" name="texto" class="form-control" placeholder="Texto">
+            </div>
+            <div class="form-group">
+                  <label for="texto2">Texto 2</label>
+                  <input type="text" name="texto2" class="form-control" placeholder="Texto 2">
             </div>
             <div class="form-group">
                   <label for="direccion">Dirección</label>

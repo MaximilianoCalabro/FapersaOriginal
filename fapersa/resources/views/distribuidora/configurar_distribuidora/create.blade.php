@@ -13,7 +13,7 @@
 			</div>
 			@endif
 
-			{!!Form::open(array('url'=>'/distribuidora/configurar_distribuidora','method'=>'POST','autocomplete'=>'off'))!!}
+			{!!Form::open(array('url'=>'/distribuidora/configurar_distribuidora','method'=>'POST','autocomplete'=>'off','files'=>'true))!!}
             {{Form::token()}}
             <div class="form-group">
             	<label for="video">Video</label>

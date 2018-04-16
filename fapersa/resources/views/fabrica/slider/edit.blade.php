@@ -13,7 +13,7 @@
             </div>
             @endif
 
-            {!!Form::model($slider,['method'=>'PATCH','route'=>['slider.update',$slider->idslider]])!!}
+            {!!Form::model($slider,['method'=>'PATCH','route'=>['slider.update',$slider->idslider],'files'=>'true'])!!}
             {{Form::token()}}
             <div class="form-group">
                   <label for="imagen_slider">Img. Slider</label>

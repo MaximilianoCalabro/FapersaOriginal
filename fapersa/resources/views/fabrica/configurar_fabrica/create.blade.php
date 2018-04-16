@@ -13,7 +13,7 @@
 			</div>
 			@endif
 
-		{!!Form::open(array('url'=>'/fabrica/configurar_fabrica','method'=>'POST','autocomplete'=>'off'))!!}
+		{!!Form::open(array('url'=>'/fabrica/configurar_fabrica','method'=>'POST','autocomplete'=>'off','files'=>'true))!!}
             {{Form::token()}}
             <div class="form-group">
                   <label for="imagen_fondo">Img. Fondo</label>
