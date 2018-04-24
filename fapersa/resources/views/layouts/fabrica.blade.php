@@ -61,8 +61,7 @@
       <nav class="navbar navbar-custom navbar-fixed-top navbar-transparent" role="navigation">
         <div class="container">
           <div class="navbar-header">
-            <img class="logo"  href="*" src="/img/LogoFa.png">
-            <h3><a class="navbar-brand1">FABRICA</a></h3>
+            <a href="/"><img class="logo" src="/img/LogoFa.png"></a>
           </div>
         </div>
       </nav>
