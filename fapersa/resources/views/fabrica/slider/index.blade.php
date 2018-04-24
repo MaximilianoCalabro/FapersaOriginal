@@ -17,7 +17,7 @@
 				</thead>
                @foreach ($slider as $cat)
 				<tr>
-					<td><img src="{{asset('img/slider/'.$cat->imagen_slider)}}" height="150px" width="150px"></td>
+					<td><img src="{{asset('img/fabrica/'.$cat->imagen_slider)}}" height="150px" width="150px"></td>
 					<td>{{ $cat->titulo_slider}}</td>
 					<td><textarea rows="7" cols="30">{{ $cat->texto_slider}}</textarea></td>
 

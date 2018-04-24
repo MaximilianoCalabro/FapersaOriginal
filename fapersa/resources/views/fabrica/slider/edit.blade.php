@@ -19,7 +19,7 @@
                   <label for="imagen_slider">Img. Slider</label>
                   <input type="file" name="imagen_slider" class="form-control" value="{{$slider->imagen_slider}}" placeholder="Img. Slider">
                   @if (($slider->imagen_slider)!='')
-                        <img src="{{asset('img/slider/'.$slider->imagen_slider)}}" height="100px" width="100px">
+                        <img src="{{asset('img/fabrica/'.$slider->imagen_slider)}}" height="100px" width="100px">
                   @endif
             </div>
             <div class="form-group">

@@ -34,7 +34,7 @@ class SliderController extends Controller
 
 		if (Input::hasFile ('imagen_slider')){
 			$file=Input::file('imagen_slider');
-			$file->move(public_path().'/img/',$file->getClientOriginalName());
+			$file->move(public_path().'/img/fabrica/',$file->getClientOriginalName());
 			$slider->imagen_slider=$file->getClientOriginalName();
 		}
 		$slider->titulo_slider=$request->get('titulo_slider');
@@ -56,7 +56,7 @@ class SliderController extends Controller
 
 		if (Input::hasFile ('imagen_slider')){
 			$file=Input::file('imagen_slider');
-			$file->move(public_path().'/img/',$file->getClientOriginalName());
+			$file->move(public_path().'/img/fabrica/',$file->getClientOriginalName());
 			$slider->imagen_slider=$file->getClientOriginalName();
 		}
 		$slider->titulo_slider=$request->get('titulo_slider');
