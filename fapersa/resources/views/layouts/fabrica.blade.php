@@ -50,7 +50,7 @@
     <link href="{{asset('lib/magnific-popup/dist/magnific-popup.css')}}" rel="stylesheet">
     <link href="{{asset('lib/simple-text-rotator/simpletextrotator.css')}}" rel="stylesheet">
     <!-- Main stylesheet and color file-->
-    <link href="{{asset('css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('css/fabrica/style.css')}}" rel="stylesheet">
     <link id="color-scheme" href="{{asset('css/colors/default.css')}}" rel="stylesheet">
   </head>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
@@ -61,51 +61,42 @@
       <nav class="navbar navbar-custom navbar-fixed-top navbar-transparent" role="navigation">
         <div class="container">
           <div class="navbar-header">
-            <h3><a class="navbar-brand" href="index.html">FAPERSA FABRICA</a></h3>
+            <img class="logo"  href="*" src="/img/LogoFa.png">
+            <h3><a class="navbar-brand1">FABRICA</a></h3>
           </div>
         </div>
       </nav>
       <section class="home-section home-full-height" id="home">
         <div class="hero-slider">
           <ul class="slides">
-            <li class="bg-dark-30 restaurant-page-header bg-dark" style="background-image:url(&quot;assets/images/restaurant/slider1.jpg&quot;);">
+            @foreach ($slider as $sli)
+            <li class="bg-dark-30 restaurant-page-header bg-dark" style="background-image:url('{{asset('img/fabrica/'.$sli->imagen_slider)}}');">
               <div class="titan-caption">
                 <div class="caption-content">
 
                 </div>
               </div>
             </li>
-            <li class="bg-dark-30 restaurant-page-header bg-dark" style="background-image:url(&quot;assets/images/restaurant/slider2.jpg&quot;);">
-              <div class="titan-caption">
-                <div class="caption-content">
-
-                </div>
-              </div>
-            </li>
-            <li class="bg-dark-30 restaurant-page-header bg-dark" style="background-image:url(&quot;assets/images/restaurant/slider3.jpg&quot;);">
-              <div class="titan-caption">
-                <div class="caption-content">
-
-                </div>
-              </div>
-            </li>
+            @endforeach
           </ul>
         </div>
       </section>
-      
-      <section class="module bg-dark-60 pt-0 pb-0 parallax-bg testimonial" data-background="assets/images/testimonial_bg.jpg">
+      @foreach ($fabrica as $fab)
+      <section class="module bg-dark-60 pt-0 pb-0 parallax-bg testimonial" data-background="{{asset('img/fabrica/'.$fab->imagen_fondo)}}">
+        @endforeach
           <div class="testimonials-slider pt-140 pb-140">
             <ul class="slides">
+              @foreach ($slider as $sli)
               <li>
                 <div class="container">
                   <div class="row">
                     <div class="col-sm-12">
-                      <h3 style="text-align: center;">Nuestros Productos</h3>
+                      <h3 style="text-align: center;">{{ $sli->titulo_slider }}</h3>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-sm-8 col-sm-offset-2">
-                      <blockquote class="testimonial-text font-alt">Nuestro producto principal son pernos obtenidos por proceso de extrusión en frio. Rango alcanzado: 14mm hasta 55 mm diametro exterior. Otros productos: caliper de freno, ejes y otras partes extruidas. Servicios: Rectificación de acabado.</blockquote>
+                      <blockquote class="testimonial-text font-alt">{{ $sli->texto_slider }}</blockquote>
                     </div>
                   </div>
                   <div class="row">
@@ -120,30 +111,8 @@
                   </div>
                 </div>
               </li>
-              <li>
-                <div class="container">
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <h3 style="text-align: center;">Sistema de Calidad</h3>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2">
-                      <blockquote class="testimonial-text font-alt">En FAPERSA I.C.S.A. buscamos mantener un alto nivel en la Fabricación de Pernos para Pistón y Piezas Forjadas en Frío de Revolución y Precisión.Nuestra empresa fue certificada ISO 9002 en abril de 1999 con Det Norske Veritas, y luego, siguiendo con nuestra política de mejora continua, en el año 2005, Fapersa certificó <a src="images/ISOCertificate.jpg" class="btn btn-send" data-toggle="modal" data-target="#iso">ISO TS 16949</a>, el nivel internacional más alto en estándares de calidad para compañías automotrices en todo el mundo.</blockquote>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-4 col-sm-offset-4">
-                      <div class="testimonial-author">
-                        <div class="testimonial-caption font-alt">
-                          <div class="testimonial-descr"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <div class="modal fade product_view" id="iso">
+              @endforeach
+<!--               <div class="modal fade product_view" id="iso">
                 <div class="modal-content">
                   <div class="modal-header">
                     <a href="#" data-dismiss="modal" class="pull-right"><span class="xxx glyphicon glyphicon-remove"></span></a>
@@ -158,55 +127,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
-              <li>
-                <div class="container">
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <h3 style="text-align: center;">Capacidad Productiva</h3>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2">
-                      <blockquote class="testimonial-text font-alt">Hoy en día, la empresa tiene una capacidad productiva de aproximadamente 700.000 piezas mensuales, equivalentes a 120 toneladas de piezas terminadas, variando estas cantidades con la distribución del diámetro de las piezas fabricadas. Tenemos capacidad de máquinaria para obtener las tolerancias dimensionales de 0,0015 mm de diámetro exterior, 0,0005 mm en la redondez y 0,05 um de rugosidad de diámetro exterior.</blockquote>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-4 col-sm-offset-4">
-                      <div class="testimonial-author">
-                        <div class="testimonial-caption font-alt">
-                          <div class="testimonial-title"></div>
-                          <div class="testimonial-descr"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="container">
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <h3 style="text-align: center;">Clientes</h3>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2">
-                      <blockquote class="testimonial-text font-alt">Tenemos 40 años de experiencia en proveedores de partes a los mercados de equipos originales y de reemplazo, el suministro de algunos de los coches grandes y los fabricantes de pistones. En todos estos años, ha desarrollado Fapersa clientes en el mercado local e internacional. Fapersa exporta más que el 70% de la producción de pernos de pistón. Los destinos más importantes son: EE.UU., Brasil, Uruguay, Venezuela, México, Sudáfrica, así como en Europa y áfrica del Norte</blockquote>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-4 col-sm-offset-4">
-                      <div class="testimonial-author">
-                        <div class="testimonial-caption font-alt">
-                          <div class="testimonial-title"></div>
-                          <div class="testimonial-descr"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
+              </div> -->
             </ul>
           </div>
         </section>
@@ -259,19 +180,21 @@
           </div>
         </div>
         </div>
-        <div class="col-xs-12 col-md-6 col-md-offset-6 side-image restaurant-image-overlay" data-background="assets/images/restaurant/reservation.jpg">
+        @foreach ($fabrica as $fab)
+        <div class="col-xs-12 col-md-6 col-md-offset-6 side-image restaurant-image-overlay" data-background="{{asset('img/fabrica/'.$fab->imagen_contacto)}}">
           <div class="row contact">
                 <div class="col-sm-12">
                   <br><br>
                   <h1 class="font-alt align-center">Contacto</h1>
                   <div class="col-md-12">
-                    <p class="st-address" style="text-align: center"><i class="fa fa-map-marker"></i> <strong>Lamadrid 3065 (3000), Santa Fe, Argentina</strong></p>
-                    <p class="st-phone" style="text-align: center"><i class="fa fa-mobile"></i> <strong>+54 (0342)4810810 / +54 (0342)4995936</strong></p>
-                    <p class="st-email" style="text-align: center"><i class="fa fa-envelope-o"></i> <strong>fapersa@fapersaicsa.com.ar</strong></p>
+                    <p class="st-address" style="text-align: center"><i class="fa fa-map-marker"></i> <strong>{{ $fab->direccion }}</strong></p>
+                    <p class="st-phone" style="text-align: center"><i class="fa fa-mobile"></i> <strong>{{ $fab->telefono }}</strong></p>
+                    <p class="st-email" style="text-align: center"><i class="fa fa-envelope-o"></i> <strong>{{ $fab->correo }}</strong></p>
                   </div>
                 </div>
               </div>
         </div>
+        @endforeach
         </div>
         </section>
         
