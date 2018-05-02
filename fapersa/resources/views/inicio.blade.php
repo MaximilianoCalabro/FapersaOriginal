@@ -70,7 +70,7 @@
       <section class="home-section bg-dark-30" id="home">
           <div class="video-player">
             <video controls autoplay>
-              <source src="{{asset('img/inicio/{{ $cat->video }}')}}" type="video/mp4">
+              <source src="{{asset('img/inicio/$cat->video')}}" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>

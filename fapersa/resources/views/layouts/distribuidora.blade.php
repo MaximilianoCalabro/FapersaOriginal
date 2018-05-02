@@ -13,22 +13,22 @@
     Favicons
     =============================================
     -->
-    <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="{{asset('images/favicons/apple-icon-57x57.png')}}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{asset('images/favicons/apple-icon-60x60.png')}}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{asset('images/favicons/apple-icon-72x72.png')}}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{asset('images/favicons/apple-icon-76x76.png')}}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{asset('images/favicons/apple-icon-114x114.png')}}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{asset('images/favicons/apple-icon-120x120.png')}}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{asset('images/favicons/apple-icon-144x144.png')}}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{asset('images/favicons/apple-icon-152x152.png')}}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('images/favicons/apple-icon-180x180.png')}}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{asset('images/favicons/android-icon-192x192.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('images/favicons/favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{asset('images/favicons/favicon-96x96.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('images/favicons/favicon-16x16.png')}}">
     <link rel="manifest" href="/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="assets/images/favicons/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="{{asset('images/favicons/ms-icon-144x144.png')}}">
     <meta name="theme-color" content="#ffffff">
     <!--  
     Stylesheets
@@ -50,7 +50,7 @@
     <link href="{{asset('lib/magnific-popup/dist/magnific-popup.css')}}" rel="stylesheet">
     <link href="{{asset('lib/simple-text-rotator/simpletextrotator.css')}}" rel="stylesheet">
     <!-- Main stylesheet and color file-->
-    <link href="{{asset('css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('css/distribuidora/style.css')}}" rel="stylesheet">
     <link id="color-scheme" href="{{asset('css/colors/default.css')}}" rel="stylesheet">
   </head>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
@@ -74,7 +74,7 @@
         </div>
         <div class="titan-caption">
           <div class="caption-content">
-            <div class="font-alt mb-35 titan-title-size-4">FAPERSA</div>
+                        <a href="/"><img class="logo" src="/img/LogoFa.png"></a>
             <div class="font-alt mb-30 titan-title-size-1">Distribuidora</div>
             <a class="section-scroll btn btn-border-w btn-round" href="#">Descargar CATALOGO</a>
             <a class="section-scroll btn btn-border-w btn-round" href="#">Acceso CLIENTE</a>
@@ -84,9 +84,11 @@
       <div class="main">
 
         <section class="module bg-dark-60 request-cta" id="contact">
+ 
           <div id="googlemaps" class="about-col">
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13587.703815461684!2d-60.72576808465798!3d-31.63587770378603!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9c72692211078557!2sFapersa+ICSA!5e0!3m2!1ses-419!2sar!4v1520346222680" width="100%" height="100%"></iframe>
           </div>
+
           <div class="contactform">
             <div class="container">
               <div class="row">

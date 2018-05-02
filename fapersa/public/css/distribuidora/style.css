@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------
-	Common
+  Common
 --------------------------------------------------------------*/
 html {
   overflow-y: scroll;
@@ -16,7 +16,10 @@ body {
 
 img {
   max-width: 100%;
+  width: 30%;
   height: auto;
+  margin-top: 5%;
+  margin-left: 5%;
 }
 
 iframe {
@@ -191,7 +194,7 @@ a,
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(64, 176, 255, 0.5);
+  background: rgba(186, 186, 186, 0.5);
   z-index: 9;
 }
 
@@ -744,7 +747,7 @@ a,
 }
 
 /*--------------------------------------------------------------
-	Buttons
+  Buttons
 --------------------------------------------------------------*/
 .btn {
   border-radius: 0;
@@ -901,7 +904,7 @@ a,
 }
 
 /*--------------------------------------------------------------
-	Forms
+  Forms
 --------------------------------------------------------------*/
 /* Selection */
 ::-moz-selection {
@@ -960,7 +963,7 @@ a,
 }
 
 /*--------------------------------------------------------------
-	Typography
+  Typography
 --------------------------------------------------------------*/
 a {
   color: #111;
@@ -1100,7 +1103,7 @@ blockquote {
 }
 
 /*--------------------------------------------------------------
-	Slider & Carousel
+  Slider & Carousel
 --------------------------------------------------------------*/
 /* -------------------------------------------------------------------
 General Styles - FlexSlider
@@ -1286,7 +1289,7 @@ General Styles - Owlcarousel
 }
 
 /*--------------------------------------------------------------
-	Preloader
+  Preloader
 --------------------------------------------------------------*/
 .page-loader {
   position: fixed;
@@ -1349,7 +1352,7 @@ General Styles - Owlcarousel
 }
 
 /*--------------------------------------------------------------
-	Navbar
+  Navbar
 --------------------------------------------------------------*/
 .navbar-custom {
   background-color: rgba(10, 10, 10, 0);
@@ -1450,37 +1453,37 @@ General Styles - Owlcarousel
 /* Navbar search
 
 .dropdown-search {
-	position: relative;
-	padding: 5px;
+  position: relative;
+  padding: 5px;
 }
 
 .dropdown-search .form-control {
-	-webkit-border-radius: 0;
-	-moz-border-radius: 0;
-	border-radius: 0;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	font-size: 11px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 11px;
 }
 
 .search-btn {
-	position: absolute;
-	background: transparent;
-	border: none;
-	overflow: hidden;
-	top: 50%;
-	right: 1px;
-	width: 42px;
-	height: 40px;
-	line-height: 38px;
-	font-size: 14px;
-	outline: none;
-	color: #999;
-	margin-top: -20px;
+  position: absolute;
+  background: transparent;
+  border: none;
+  overflow: hidden;
+  top: 50%;
+  right: 1px;
+  width: 42px;
+  height: 40px;
+  line-height: 38px;
+  font-size: 14px;
+  outline: none;
+  color: #999;
+  margin-top: -20px;
 }*/
 
 /*--------------------------------------------------------------
-	Header
+  Header
 --------------------------------------------------------------*/
 .home-section {
   position: relative;
@@ -1777,7 +1780,7 @@ General Styles - Owlcarousel
 }
 
 /*--------------------------------------------------------------
-	Footer
+  Footer
 --------------------------------------------------------------*/
 .footer {
   padding: 10px 0;
@@ -1815,7 +1818,7 @@ Google map
 }
 
 /*--------------------------------------------------------------
-	Services & Features
+  Services & Features
 --------------------------------------------------------------*/
 .features-item {
   margin: 20px 0;
@@ -1875,7 +1878,7 @@ Google map
 }
 
 /*--------------------------------------------------------------
-	Team
+  Team
 --------------------------------------------------------------*/
 .team-item {
   position: relative;
@@ -1961,7 +1964,7 @@ Google map
 }
 
 /*--------------------------------------------------------------
-	Restaurant Menu
+  Restaurant Menu
 --------------------------------------------------------------*/
 .menu {
   border-bottom: 1px dotted #e5e5e5;
@@ -1982,7 +1985,7 @@ Google map
 }
 
 /*--------------------------------------------------------------
-	Price Table
+  Price Table
 --------------------------------------------------------------*/
 .price-table {
   background: #fff;
@@ -2079,7 +2082,7 @@ Google map
 }
 
 /*--------------------------------------------------------------
-	Fun fact
+  Fun fact
 --------------------------------------------------------------*/
 .count-item {
   text-align: center;
@@ -2091,7 +2094,7 @@ Google map
 }
 
 /*--------------------------------------------------------------
-	Video Box
+  Video Box
 --------------------------------------------------------------*/
 .video-box {
   text-align: center;
@@ -2116,7 +2119,7 @@ Google map
 }
 
 /*--------------------------------------------------------------
-	Portfolio
+  Portfolio
 --------------------------------------------------------------*/
 /* Portfolio filter */
 .filter {
@@ -2266,7 +2269,7 @@ Google map
 }
 
 /*--------------------------------------------------------------
-	Single Portfolio
+  Single Portfolio
 --------------------------------------------------------------*/
 .work-details {
   margin: 0 0 20px;
@@ -2290,7 +2293,7 @@ Google map
 }
 
 /*--------------------------------------------------------------
-	Call to action
+  Call to action
 --------------------------------------------------------------*/
 .callout-text {
   color: rgba(255, 255, 255, 0.6);
@@ -2313,7 +2316,7 @@ Google map
 }
 
 /*--------------------------------------------------------------
-	Testimonial
+  Testimonial
 --------------------------------------------------------------*/
 .testimonial:before {
   background: rgba(2, 2, 2, 0.4);
@@ -2326,7 +2329,7 @@ Google map
 .testimonial-text {
   text-align: center;
   font-style: normal;
-  font-size: 12px;
+  font-size: 18px;
 }
 
 .testimonial-caption {
@@ -2344,7 +2347,7 @@ Google map
 }
 
 /*--------------------------------------------------------------
-	Gallery
+  Gallery
 --------------------------------------------------------------*/
 .gallery-item {
   position: relative;
@@ -2421,7 +2424,7 @@ Google map
 }
 
 /*--------------------------------------------------------------
-	Blog Post
+  Blog Post
 --------------------------------------------------------------*/
 .post {
   margin: 0 0 80px;
@@ -2517,7 +2520,7 @@ Google map
 }
 
 /*--------------------------------------------------------------
-	Widgets
+  Widgets
 --------------------------------------------------------------*/
 /* Progress bars */
 .progress {
@@ -2697,7 +2700,7 @@ Google map
 }
 
 /*--------------------------------------------------------------
-	Comment Box in Blog
+  Comment Box in Blog
 --------------------------------------------------------------*/
 .comments,
 .comment-form {
@@ -2741,7 +2744,7 @@ Google map
 }
 
 /*--------------------------------------------------------------
-	Client
+  Client
 --------------------------------------------------------------*/
 .client-logo {
   opacity: .5;
@@ -2752,7 +2755,7 @@ Google map
 }
 
 /*--------------------------------------------------------------
-	Shop Items
+  Shop Items
 --------------------------------------------------------------*/
 .shop-item {
   text-align: center;
@@ -2817,7 +2820,7 @@ Google map
 }
 
 /* -------------------------------------------------------------------
-	Exclusive products
+  Exclusive products
 ------------------------------------------------------------------- */
 .ex-product {
   opacity: .7;
@@ -2829,7 +2832,7 @@ Google map
 }
 
 /*--------------------------------------------------------------
-	Shop Single Product
+  Shop Single Product
 --------------------------------------------------------------*/
 .product-gallery {
   list-style: none;
@@ -2874,7 +2877,7 @@ Google map
 
 
 /*--------------------------------------------------------------
-	Showcase Page
+  Showcase Page
 --------------------------------------------------------------*/
 .showcase-page .showcase-page-header {
   background-color: rgba(2, 2, 2, 0.7);
@@ -2904,7 +2907,7 @@ Google map
 }
 
 /*--------------------------------------------------------------
-	Documentation Page
+  Documentation Page
 --------------------------------------------------------------*/
 .documentation-page {
   font-size: 14px;
@@ -2969,7 +2972,7 @@ Google map
 }
 
 /*--------------------------------------------------------------
-	Responsive Styles - Media Queries
+  Responsive Styles - Media Queries
 --------------------------------------------------------------*/
 @media (min-width: 768px) {
   .navbar-transparent {
