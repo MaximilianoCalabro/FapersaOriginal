@@ -1,9 +1,9 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-04-2018 a las 11:59:13
+-- Tiempo de generación: 07-05-2018 a las 01:11:22
 -- Versión del servidor: 10.1.28-MariaDB
 -- Versión de PHP: 7.1.11
 
@@ -75,9 +75,10 @@ INSERT INTO `fa_fabrica` (`idfabrica`, `imagen_fondo`, `imagen_contacto`, `direc
 CREATE TABLE `fa_inicio` (
   `idinicio` int(11) NOT NULL,
   `video` varchar(250) COLLATE utf8_bin NOT NULL,
-  `imagen` varchar(50) COLLATE utf8_bin NOT NULL,
+  `imagen` varchar(250) COLLATE utf8_bin NOT NULL,
   `titulo` varchar(50) COLLATE utf8_bin NOT NULL,
   `texto` text COLLATE utf8_bin NOT NULL,
+  `texto2` text COLLATE utf8_bin,
   `direccion` varchar(250) COLLATE utf8_bin NOT NULL,
   `telefono` varchar(50) COLLATE utf8_bin NOT NULL,
   `correo` varchar(150) COLLATE utf8_bin NOT NULL
@@ -87,8 +88,8 @@ CREATE TABLE `fa_inicio` (
 -- Volcado de datos para la tabla `fa_inicio`
 --
 
-INSERT INTO `fa_inicio` (`idinicio`, `video`, `imagen`, `titulo`, `texto`, `direccion`, `telefono`, `correo`) VALUES
-(1, 'Website Background Video (720p_30fps_H264-192kbit_AAC).mp4', 'about_bg.jpg', 'LA EMPRESA', 'FAPERSA ICSA fue fundada el 1 de septiembre de 1963, por un grupo empresario dedicado a la comercialización de piezas de automóviles, con capitales nacionales, hace que sus principales pasos bajo licencia y la evaluación de Suko (Alemania).\r\n\r\nLa exportación en esos años fue de aproximadamente 5% de las ventas y participan México, EE.UU. y Colombia. La superficie ocupada fue 900m2. En los años ochenta, el aumento de las exportaciones subio un 35%, incluidos los clientes de Uruguay, Chile, Brasil y Perú.', 'Lamadrid 3065 (3000), Santa Fe, Argentina', '+54 (0342)4810810 / +54 (0342)4995936', 'fapersa@fapersaicsa.com.ar');
+INSERT INTO `fa_inicio` (`idinicio`, `video`, `imagen`, `titulo`, `texto`, `texto2`, `direccion`, `telefono`, `correo`) VALUES
+(1, 'Website Background Video.mp4', 'about_bg.jpg', 'LA EMPRESA', 'FAPERSA ICSA fue fundada el 1 de septiembre de 1963, por un grupo empresario dedicado a la comercialización de piezas de automóviles, con capitales nacionales, hace que sus principales pasos bajo licencia y la evaluación de Suko (Alemania).', 'La exportación en esos años fue de aproximadamente 5% de las ventas y participan México, EE.UU. y Colombia. La superficie ocupada fue 900m2. En los años ochenta, el aumento de las exportaciones subio un 35%, incluidos los clientes de Uruguay, Chile, Brasil y Perú.', 'Lamadrid 3065 (3000), Santa Fe, Argentina', '+54 (0342)4810810 / +54 (0342)4995936', 'fapersa@fapersaicsa.com.ar');
 
 -- --------------------------------------------------------
 
@@ -155,13 +156,13 @@ ALTER TABLE `fa_distribuidora`
 -- AUTO_INCREMENT de la tabla `fa_fabrica`
 --
 ALTER TABLE `fa_fabrica`
-  MODIFY `idfabrica` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idfabrica` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `fa_inicio`
 --
 ALTER TABLE `fa_inicio`
-  MODIFY `idinicio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idinicio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `fa_slider`
