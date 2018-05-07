@@ -24,7 +24,7 @@ class DistribuidoraFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'video'=>'required|max:250',
+            'video'=>'required',
             'catalogo'=>'required|max:250',
             'direccion'=>'required|max:250',
             'telefono'=>'required|max:50',

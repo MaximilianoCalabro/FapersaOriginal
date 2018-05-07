@@ -133,6 +133,7 @@
 
         <section class="module pt-0 pb-0">
           <div class="row position-relative m-0">
+
             <div class="col-xs-12 col-md-6 side-image-text">
               
               <div class="col-md-12">
@@ -183,12 +184,12 @@
         <div class="col-xs-12 col-md-6 col-md-offset-6 side-image restaurant-image-overlay" data-background="{{asset('img/fabrica/'.$fab->imagen_contacto)}}">
           <div class="row contact">
                 <div class="col-sm-12">
-                  <br><br>
-                  <h1 class="font-alt align-center">Contacto</h1>
+                  <br><br> <br><br>
+                  <h1 class="font-alt align-center" style="color: black">Contacto</h1>
                   <div class="col-md-12">
-                    <p class="st-address" style="text-align: center"><i class="fa fa-map-marker"></i> <strong>{{ $fab->direccion }}</strong></p>
-                    <p class="st-phone" style="text-align: center"><i class="fa fa-mobile"></i> <strong>{{ $fab->telefono }}</strong></p>
-                    <p class="st-email" style="text-align: center"><i class="fa fa-envelope-o"></i> <strong>{{ $fab->correo }}</strong></p>
+                    <p class="st-address" style="text-align: center; color: black"><i class="fa fa-map-marker"></i> <strong>{{ $fab->direccion }}</strong></p>
+                    <p class="st-phone" style="text-align: center; color: black"><i class="fa fa-mobile"></i> <strong>{{ $fab->telefono }}</strong></p>
+                    <p class="st-email" style="text-align: center; color: black"><i class="fa fa-envelope-o"></i> <strong>{{ $fab->correo }}</strong></p>
                   </div>
                 </div>
               </div>

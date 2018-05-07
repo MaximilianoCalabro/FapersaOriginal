@@ -16,7 +16,10 @@ body {
 
 img {
   max-width: 100%;
+  width: 75%;
   height: auto;
+  margin-top: 5%;
+  margin-left: 5%;
 }
 
 iframe {

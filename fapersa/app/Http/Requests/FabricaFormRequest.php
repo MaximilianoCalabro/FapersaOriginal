@@ -24,8 +24,8 @@ class FabricaFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'imagen_fondo'=>'required',
-            'imagen_contacto'=>'required',
+            'imagen_fondo'=>'',
+            'imagen_contacto'=>'',
             'direccion'=>'required|max:250',
             'telefono'=>'required|max:50',
             'correo'=>'required|max:150'

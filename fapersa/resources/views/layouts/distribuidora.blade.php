@@ -74,10 +74,12 @@
         </div>
         <div class="titan-caption">
           <div class="caption-content">
-                        <a href="/"><img class="logo" src="/img/LogoFa.png"></a>
-            <div class="font-alt mb-30 titan-title-size-1">Distribuidora</div>
-            <a class="section-scroll btn btn-border-w btn-round" href="#">Descargar CATALOGO</a>
+            <a href="/"><img class="logo" src="/img/LogoFa.png"></a>
+            <div class="font-alt mb-30 titan-title-size-1"></div>
+            @foreach ($distribuidora as $dist)
+            <a class="section-scroll btn btn-border-w btn-round" href="/img/distribuidora/{{ $dist->catalogo }}" download="CatalogoFapersa">Descargar CATALOGO</a>
             <a class="section-scroll btn btn-border-w btn-round" href="#">Acceso CLIENTE</a>
+            @endforeach
           </div>
         </div>
       </section>

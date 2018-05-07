@@ -21,11 +21,17 @@ class PaginaController extends Controller
 
 		return view('/inicio',["inicio"=>$inicio]);
 	}
-	public function showfa() //cosulta a la db por cada seccion
+	public function showfa() //cosulta a la db por fabrica
 	{
 		$slider=DB::table('fa_slider')->get();
 		$fabrica=DB::table('fa_fabrica')->get();
 
 		return view('/layouts/fabrica',["slider"=>$slider, "fabrica"=>$fabrica]);
+	}
+	public function showdi() //cosulta a la db por distribuidora
+	{
+		$distribuidora=DB::table('fa_distribuidora')->get();
+
+		return view('/layouts/distribuidora',["distribuidora"=>$distribuidora]);
 	}
 }
