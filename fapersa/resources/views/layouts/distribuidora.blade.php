@@ -65,6 +65,7 @@
           </div> -->
         </div>
       </nav>
+      @foreach ($distribuidora as $dist)
       <section class="home-section bg-dark-30" id="home" data-background="assets/images/finance/finance_header_bg.png">
         <div class="video-player" data-property="{videoURL:'https://www.youtube.com/watch?v=uzlUiiH9IFo', containment:'.home-section', startAt:30, mute:false, autoPlay:true, loop:true, opacity:1, showControls:false, showYTLogo:false, vol:25}"></div>
         <div class="video-controls-box">
@@ -76,10 +77,10 @@
           <div class="caption-content">
             <a href="/"><img class="logo" src="/img/LogoFa.png"></a>
             <div class="font-alt mb-30 titan-title-size-1"></div>
-            @foreach ($distribuidora as $dist)
-            <a class="section-scroll btn btn-border-w btn-round" href="/img/distribuidora/{{ $dist->catalogo }}" download="CatalogoFapersa">Descargar CATALOGO</a>
+            
+            <a class="section-scroll btn btn-border-w btn-round" href="{{asset('img/distribuidora/'.$dist->catalogo)}}" download="CatalogoFapersa">Descargar CATALOGO</a>
             <a class="section-scroll btn btn-border-w btn-round" href="#">Acceso CLIENTE</a>
-            @endforeach
+            
           </div>
         </div>
       </section>
@@ -96,10 +97,9 @@
               <div class="row">
                 <div class="col-sm-6 cont">
                   <h2 class="font-alt" style="text-align: center">Contactenos</h2>
-                  <p class="st-address" style="text-align: center"><i class="fa fa-map-marker"></i> <strong>Lamadrid 3065 (3000), Santa Fe, Argentina</strong></p>
-                  <p class="st-phone" style="text-align: center"><i class="fa fa-mobile"></i> <strong>+54 (0342)4810810</strong></p>
-                  <p class="st-phone" style="text-align: center"><i class="fa fa-mobile"></i> <strong>+54 (0342)4995936</strong></p>
-                  <p class="st-email" style="text-align: center"><i class="fa fa-envelope-o"></i> <strong>fapersa@fapersaicsa.com.ar</strong></p>
+                  <p class="st-address" style="text-align: center"><i class="fa fa-map-marker"></i> <strong>{{ $dist->direccion }}</strong></p>
+                  <p class="st-phone" style="text-align: center"><i class="fa fa-mobile"></i> <strong>{{ $dist->telefono }}</strong></p>
+                  <p class="st-email" style="text-align: center"><i class="fa fa-envelope-o"></i> <strong>{{ $dist->correo }}</strong></p>
                 </div>
                 <div class="col-sm-6">
                   <div class="row">
@@ -150,7 +150,7 @@
             </div>
           </div>
         </section>
-      
+      @endforeach
       <div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div>
     </main>
     <!--  

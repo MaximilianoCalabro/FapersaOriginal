@@ -37,7 +37,11 @@ class DistribuidoraController extends Controller
 			$file->move(public_path().'/img/distribuidora/',$file->getClientOriginalName());
 			$distribuidora->video=$file->getClientOriginalName();
 		}
-		$distribuidora->catalogo=$request->get('catalogo');
+		if (Input::hasFile ('catalogo')){
+			$file=Input::file('catalogo');
+			$file->move(public_path().'/img/distribuidora/',$file->getClientOriginalName());
+			$distribuidora->catalogo=$file->getClientOriginalName();
+		}
 		$distribuidora->direccion=$request->get('direccion');
 		$distribuidora->telefono=$request->get('telefono');
 		$distribuidora->correo=$request->get('correo');
@@ -57,7 +61,6 @@ class DistribuidoraController extends Controller
 	{
 		$distribuidora=fa_distribuidora::findOrFail($id);
 
-		$distribuidora->catalogo=$request->get('catalogo');
 		$distribuidora->direccion=$request->get('direccion');
 		$distribuidora->telefono=$request->get('telefono');
 		$distribuidora->correo=$request->get('correo');
@@ -65,6 +68,11 @@ class DistribuidoraController extends Controller
 			$file=Input::file('video');
 			$file->move(public_path().'/img/distribuidora/',$file->getClientOriginalName());
 			$distribuidora->video=$file->getClientOriginalName();
+		}
+		if (Input::hasFile ('catalogo')){
+			$file=Input::file('catalogo');
+			$file->move(public_path().'/img/distribuidora/',$file->getClientOriginalName());
+			$distribuidora->catalogo=$file->getClientOriginalName();
 		}
 		$distribuidora->update();
 		return Redirect::to('distribuidora/configurar_distribuidora');

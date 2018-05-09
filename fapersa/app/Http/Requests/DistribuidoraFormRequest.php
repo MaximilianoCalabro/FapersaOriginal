@@ -25,7 +25,7 @@ class DistribuidoraFormRequest extends FormRequest
     {
         return [
             'video'=>'',
-            'catalogo'=>'required',
+            'catalogo'=>'',
             'direccion'=>'required|max:250',
             'telefono'=>'required|max:50',
             'correo'=>'required|max:150'
