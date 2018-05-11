@@ -15,7 +15,7 @@ class PaginaController extends Controller
     {
 		// $this->middleware('auth');
     }
-    public function show() //cosulta a la db por cada seccion
+    public function showini() //cosulta a la db por cada seccion
 	{
 		$inicio=DB::table('fa_inicio')->get();
 
