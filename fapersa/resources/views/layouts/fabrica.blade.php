@@ -185,7 +185,7 @@
           <div class="row contact">
                 <div class="col-sm-12">
                   <br><br> <br><br>
-                  <h1 class="font-alt align-center" style="color: black">Contacto</h1>
+                  <h1 class="font-alt align-center" style="color: black">  -Contacto-  </h1>
                   <div class="col-md-12">
                     <p class="st-address" style="text-align: center; color: black"><i class="fa fa-map-marker"></i> <strong>{{ $fab->direccion }}</strong></p>
                     <p class="st-phone" style="text-align: center; color: black"><i class="fa fa-mobile"></i> <strong>{{ $fab->telefono }}</strong></p>

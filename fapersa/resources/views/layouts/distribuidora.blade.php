@@ -67,7 +67,7 @@
       </nav>
       @foreach ($distribuidora as $dist)
       <section class="home-section bg-dark-30" id="home" data-background="assets/images/finance/finance_header_bg.png">
-        <div class="video-player" data-property="{videoURL:'https://www.youtube.com/watch?v=uzlUiiH9IFo', containment:'.home-section', startAt:30, mute:false, autoPlay:true, loop:true, opacity:1, showControls:false, showYTLogo:false, vol:25}"></div>
+        <div class="video-player" data-property="{videoURL:'img/distribuidora/{{ $dist->video }}', containment:'.home-section', startAt:30, mute:false, autoPlay:true, loop:true, opacity:1, showControls:false, showYTLogo:false, vol:25}"></div>
         <div class="video-controls-box">
           <div class="container">
             <div class="video-controls"><a class="fa fa-volume-up" id="video-volume" href="#">&nbsp;</a><a class="fa fa-pause" id="video-play" href="#">&nbsp;</a></div>
