@@ -1,0 +1,43 @@
+Users & Pass
+---------------------------------------------------
+°NKSTUDIOS
+	
+	-Cpanel
+		nkstudio
+		Nkt909ioD@
+	-Admin (.admin)
+		nk
+		nk4321s
+	-Cliente
+		nkstudios.net
+		nkstudio
+		Nkt909ioD@
+---------------------------------------------------
+°Fapersa (.com.ar)
+
+	-Cpanel
+		fapersa
+		F@perZa2018
+	-Admin (.admin)
+		admin
+		fapersa234x
+	-Cliente
+		-
+		-
+		-
+	-User
+		103
+		654321
+---------------------------------------------------
+Amiun
+	
+	-Cpanel
+		-
+		-
+	-Admin (.admin)
+		nk
+		nk1234
+	-Cliente
+		amiun.com.ar
+		amiunco
+		AmiUnC0m@r
